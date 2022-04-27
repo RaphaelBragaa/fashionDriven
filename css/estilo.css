@@ -25,7 +25,7 @@ header{
 .tela{
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 45%;
     height: 700px;
     background-color: #404EED;
     padding: 30px;
@@ -33,7 +33,7 @@ header{
 }
 
 .ilustracao{
-    width: 80%;
+    width: 90%;
     height: 93%;
 }
 
@@ -41,23 +41,22 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 55%;
     height: 700px;
-    background-color: red;
 }
 
 .caixinha{
     height:550px;
-    width: 65%;
+    width: 50%;
     background-color: white;
     font-family: 'Roboto', sans-serif;
 }
 
 .escolha{
     display: flex;
+    justify-content: space-around;
     width: 100%;
-    height: 30%;
-    background-color: yellow;
+    
 }
 
 .opçao{
@@ -67,22 +66,97 @@ header{
     width: 80px;
     height: 80px;
     border-radius: 80px;
-    background-color: #C4C4C4;
+    background-color: #F2F2F2;
     box-sizing: border-box;
+    border: 0.5px solid #C4C4C4
 }
 
+.opçao:hover{
+    border: 3px solid #404EED;
+}
+
+
+
 .desenho{
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     object-fit: cover;
+}
+
+#manga{
+    width: 60px;
+    height: 60px;
 }
 
 opçaoG{
     width: 100px;
     height: 100px;
-    background-color: green;
 }
 
+h1{
+    margin-bottom: 5px;
+}
+
+h2{
+    margin-bottom: 15px;
+    margin-top: 4px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+#gola{
+    width: 65px;
+    height: 55px;
+}
+
+#redonda{
+    width: 72px;
+    height: 50px;
+}
+
+#polo{
+    width: 67px;
+    height: 46px;
+}
+
+#seda{
+    width: 47px;
+    height: 47px;
+}
+
+#poliester{
+    width: 52px;
+    height: 47px;
+}
+
+.linkIMG{
+    width: 100%;
+    margin-top: 10px;
+}
+
+input{
+    height: 30px;
+    width: 100%;
+    border-radius: 7px;
+    border: none;
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 7px;
+    background-color: #C4C4C4;
+    color: white;
+}
+
+.botao:hover{
+    background-color: #404EED;
+}
 
 
 
