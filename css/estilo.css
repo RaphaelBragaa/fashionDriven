@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: #404EED;
+}
+
+.logo{
+    height: 50px;
+    margin-left: 60px;
+}
+
+.caixona{
+    display: flex;
+}
+
+.tela{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 700px;
+    background-color: #404EED;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.ilustracao{
+    width: 80%;
+    height: 93%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 700px;
+    background-color: red;
+}
+
+.caixinha{
+    height:550px;
+    width: 65%;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.escolha{
+    display: flex;
+    width: 100%;
+    height: 30%;
+    background-color: yellow;
+}
+
+.opçao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    background-color: #C4C4C4;
+    box-sizing: border-box;
+}
+
+.desenho{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+opçaoG{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+
+
+
