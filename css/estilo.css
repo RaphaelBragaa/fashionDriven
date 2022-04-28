@@ -74,7 +74,7 @@ header{
     border: 0.5px solid #C4C4C4
 }
 
-.opçao:hover{
+.selecionadoOP{
     border: 3px solid #404EED;
 }
 
@@ -157,19 +157,18 @@ input{
     color: white;
 }
 
-.botao:hover{
+.selecionadoBOT{
     background-color: #404EED;
 }
 
 .pedidos{
-    width: 100%;
+    width: 70%;
     height: 250px;
     background-color: #F2F2F2;
 }
 
 h3{
     margin-top: 30px;
-    margin-left: 183px;
     margin-bottom: 22px;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
@@ -178,9 +177,7 @@ h3{
 .vitrine{
     display: flex;
     justify-content: space-between;
-    left: 0; right: 0;
-margin: auto;
-    width: 70%;
+    width: 80%;
     height: 200px;
 }
 
@@ -213,4 +210,13 @@ strong{
     font-weight: 700;
 }
 
+.centralizadora{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selecionadoRED{
+    border: 2px solid red;
+}
 
