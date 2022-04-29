@@ -1,50 +1,71 @@
 const padrao = /^https?:\/\/.+\/.+$/
+const url = document.querySelector("input");
+const botao = document.querySelector(".botao");
+const modelo1 = document.querySelector(".modelo .selecionadoOP")
+const modelo2 = document.querySelector(".gola .selecionadoOP")
+const modelo3 = document.querySelector(".tecido .selecionadoOP")
+let modelo;
+let gola;
+let tecido;
+let nome;
 
+
+function Nome(){
+    nome = prompt("Qual seu nome?")
+}
+Nome()
 
 function SelecionarModelo (elemento){
-    const modelo = document.querySelector(".modelo .selecionadoOP")
-    if (modelo !== null) {
-        modelo.classList.toggle("selecionadoOP");
-      }
     
-      elemento.classList.add("selecionadoOP");
-      return true
+    if (modelo1 !== null) {
+        modelo1.classList.toggle("selecionadoOP");
+      }else{
+         elemento.classList.add("selecionadoOP"); 
+         modelo = 1
+      } 
+      
 }
 
 function SelecionarGola (elemento){
-    const modelo = document.querySelector(".gola .selecionadoOP")
-    if (modelo !== null) {
-        modelo.classList.toggle("selecionadoOP");
+    
+    if (modelo2 !== null) {
+        modelo2.classList.toggle("selecionadoOP");
+      } else{
+         elemento.classList.add("selecionadoOP");
+         gola = 1 
       }
     
-      elemento.classList.add("selecionadoOP");
-      return true
 }
 
 function SelecionarTecido (elemento){
-    const modelo = document.querySelector(".tecido .selecionadoOP")
-    if (modelo !== null) {
-        modelo.classList.toggle("selecionadoOP");
-      }
     
-      elemento.classList.add("selecionadoOP");
-      return true
+    if (modelo3 !== null) {
+        modelo3.classList.toggle("selecionadoOP");
+      } else{
+         elemento.classList.add("selecionadoOP");
+         tecido = 1 
+      }
+
 }
 
 function ValidarURL(){
-    let url = document.querySelector("input")
     if(padrao.test(url.value) == true){
         return true
     } else {
-        url.classList.add(".selecionadoRED")
+        url.classList.add("selecionadoRED")
     }
-    return true
+    
 }
 
-function AtivarBotao(elemento){
-    
-         
-        elemento.classList.add(".selecionadoBOT")  
-    
-    
+function AtivarBotao(){
+    if (modelo == 1 && gola == 1 && tecido == 1 && ValidarURL() == true) {
+       botao.classList.remove("inativo")
+       botao.classList.add("selecionadoBOT")
+       alert(`Obrigado ${nome}, sua compra foi confirmada !`)
+    } else {
+        alert("Não deu certo")
+    }
+     
+
+     
 }

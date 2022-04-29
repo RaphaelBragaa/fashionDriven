@@ -153,9 +153,10 @@ input{
     height: 30px;
     margin-top: 20px;
     border-radius: 7px;
-    background-color: #C4C4C4;
     color: white;
 }
+
+
 
 .selecionadoBOT{
     background-color: #404EED;
@@ -218,5 +219,9 @@ strong{
 
 .selecionadoRED{
     border: 2px solid red;
+}
+
+.inativo{
+    background-color: #C4C4C4;
 }
 
