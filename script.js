@@ -1,10 +1,7 @@
 const padrao = /^https?:\/\/.+\/.+$/
 const url = document.querySelector("input");
 const botao = document.querySelector(".botao");
-const modelo1 = document.querySelector(".modelo .selecionadoOP")
-const modelo2 = document.querySelector(".gola .selecionadoOP")
-const modelo3 = document.querySelector(".tecido .selecionadoOP")
-let modelo;
+let modelos;
 let gola;
 let tecido;
 let nome;
@@ -15,41 +12,45 @@ function Nome(){
 }
 Nome()
 
+
+//Funções de Selecionar as opções
 function SelecionarModelo (elemento){
-    
-    if (modelo1 !== null) {
-        modelo1.classList.toggle("selecionadoOP");
-      }else{
+    const modelo = document.querySelector(".modelo .selecionadoOP")
+    if (modelo !== null) {
+        modelo.classList.toggle("selecionadoOP");
+      }
          elemento.classList.add("selecionadoOP"); 
-         modelo = 1
-      } 
+         modelos = 1
+      
       
 }
 
 function SelecionarGola (elemento){
-    
-    if (modelo2 !== null) {
-        modelo2.classList.toggle("selecionadoOP");
-      } else{
+    const modelo = document.querySelector(".gola .selecionadoOP")
+    if (modelo !== null) {
+        modelo.classList.toggle("selecionadoOP");
+      } 
+
          elemento.classList.add("selecionadoOP");
          gola = 1 
-      }
+      
     
 }
 
 function SelecionarTecido (elemento){
-    
-    if (modelo3 !== null) {
-        modelo3.classList.toggle("selecionadoOP");
-      } else{
+    const modelo = document.querySelector(".tecido .selecionadoOP")
+    if (modelo !== null) {
+        modelo.classList.toggle("selecionadoOP");
+      } 
+
          elemento.classList.add("selecionadoOP");
          tecido = 1 
-      }
-
 }
+//Funções de Selecionar as opções
 
 function ValidarURL(){
     if(padrao.test(url.value) == true){
+        url.classList.remove("selecionadoRED")
         return true
     } else {
         url.classList.add("selecionadoRED")
@@ -58,7 +59,7 @@ function ValidarURL(){
 }
 
 function AtivarBotao(){
-    if (modelo == 1 && gola == 1 && tecido == 1 && ValidarURL() == true) {
+    if (modelos == 1 && gola == 1 && tecido == 1 && ValidarURL() == true) {
        botao.classList.remove("inativo")
        botao.classList.add("selecionadoBOT")
        alert(`Obrigado ${nome}, sua compra foi confirmada !`)
