@@ -5,6 +5,7 @@ let modelos;
 let gola;
 let tecido;
 let nome;
+let link;
 
 
 function Nome(){
@@ -22,7 +23,7 @@ function SelecionarModelo (elemento){
          elemento.classList.add("selecionadoOP"); 
          modelos = 1
       
-      
+         MostrarBotao()
 }
 
 function SelecionarGola (elemento){
@@ -34,7 +35,7 @@ function SelecionarGola (elemento){
          elemento.classList.add("selecionadoOP");
          gola = 1 
       
-    
+         MostrarBotao()
 }
 
 function SelecionarTecido (elemento){
@@ -45,28 +46,45 @@ function SelecionarTecido (elemento){
 
          elemento.classList.add("selecionadoOP");
          tecido = 1 
+         MostrarBotao()
 }
 //Funções de Selecionar as opções
 
 function ValidarURL(){
     if(padrao.test(url.value) == true){
         url.classList.remove("selecionadoRED")
+        return true 
+        
+    } 
+
+MostrarBotao()
+}
+
+function MostrarBotao(){
+    if (padrao.test(url.value) == true && modelos == 1 && gola == 1 && tecido == 1 ) {
+        botao.classList.remove("inativo")
+        botao.classList.add("selecionadoBOT")
         return true
-    } else {
-        url.classList.add("selecionadoRED")
-    }
+     } else {
+         console.log("nada")
+        
+     }
     
 }
 
+setInterval (MostrarBotao, 1000)
+
+
+
 function AtivarBotao(){
     if (modelos == 1 && gola == 1 && tecido == 1 && ValidarURL() == true) {
-       botao.classList.remove("inativo")
-       botao.classList.add("selecionadoBOT")
+        botao.classList.remove("inativo")
+        botao.classList.add("selecionadoBOT")
        alert(`Obrigado ${nome}, sua compra foi confirmada !`)
     } else {
         alert("Não deu certo")
     }
-     
-
-     
 }
+
+
+
