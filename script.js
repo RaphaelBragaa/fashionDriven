@@ -52,7 +52,6 @@ function SelecionarTecido (elemento){
 
 function ValidarURL(){
     if(padrao.test(url.value) == true){
-        url.classList.remove("selecionadoRED")
         return true 
         
     } 
@@ -65,10 +64,7 @@ function MostrarBotao(){
         botao.classList.remove("inativo")
         botao.classList.add("selecionadoBOT")
         return true
-     } else {
-         console.log("nada")
-        
-     }
+     } 
     
 }
 
@@ -85,6 +81,25 @@ function AtivarBotao(){
         alert("Não deu certo")
     }
 }
+
+
+function BuscarDados(){
+const promessa = axios.get("https://mock-api.driven.com.br/api/v4/shirts-api/shirts")
+promessa.then(RenderizarRoupas)
+}
+
+function RenderizarRoupas (resposta){
+   const CamisasOnline = document.querySelector(".vitrine");
+   CamisasOnline.innerHTML = "";
+   console.log(resposta.data)
+   for (let i = 0; i < resposta.data.length; i++){
+    CamisasOnline.innerHTML += `<div class="expo"><img class="roupas"src="${resposta.data[i].image}"><h4><strong>Criador:</strong> <span>${resposta.data[i].owner}</span></h4></div>`
+    
+   }
+}
+
+BuscarDados()
+
 
 
 

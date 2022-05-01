@@ -178,8 +178,9 @@ h3{
 .vitrine{
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
     height: 200px;
+    overflow: auto;
 }
 
 .expo{
@@ -187,6 +188,7 @@ h3{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 15px;
     height: 100%;
     width: 150px;
     background-color: white;
