@@ -108,6 +108,10 @@ h2{
     font-weight: 400;
 }
 
+#tipo{
+    display: none;
+}
+
 #gola{
     width: 65px;
     height: 55px;
